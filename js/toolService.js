@@ -1,8 +1,14 @@
 // toolService.js
-
 // API Configuration
-const BASE_URL = 'http://localhost:1337'; // Replace with your actual API URL
+let BASE_URL = 'http://localhost:1337'; // Replace with your actual API URL
 
+if (window.location.hostname === 'localhost') {
+  BASE_URL = 'http://localhost:3000';
+} else if (window.location.hostname === 'geniedesk.netlify.app') {
+  BASE_URL = 'https://goodact.onrender.com';
+} else {
+  BASE_URL = 'https://goodact-staging.onrender.com';
+}
 /**
  * Fetches tools from API with retry logic
  * @param {number} retries - Number of retry attempts
