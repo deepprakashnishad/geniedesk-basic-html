@@ -1,13 +1,21 @@
 // toolService.js
 // API Configuration
 let BASE_URL = 'http://localhost:1337'; // Replace with your actual API URL
+let UI_BASE_URL = 'http://localhost:4200';
 
-if (window.location.hostname === 'localhost') {
-  BASE_URL = 'http://localhost:3000';
+console.log(window.location.hostname);
+if (
+  window.location.hostname === 'localhost' || 
+  window.location.hostname === '127.0.0.1' ||
+  window.location.hostname === '192.168.1.10') {
+  BASE_URL = 'http://localhost:1337';
+  UI_BASE_URL = 'http://localhost:4200';
 } else if (window.location.hostname === 'geniedesk.netlify.app') {
   BASE_URL = 'https://goodact.onrender.com';
+  UI_BASE_URL = 'https://flipnetpro.netlify.app';
 } else {
   BASE_URL = 'https://goodact-staging.onrender.com';
+  UI_BASE_URL = 'https://6816dc499822eb91c50b68c5--flipnetpro.netlify.app';
 }
 /**
  * Fetches tools from API with retry logic
@@ -23,6 +31,13 @@ export async function fetchToolsListWithRetry(retries = 3) {
     const data = await response.json();
     
     if (data && data.success && Array.isArray(data.tools)) {
+      var tools = data.tools;
+      if(tools.length > 0 && !tools[0].link){
+        tools = tools.map(tool=>{
+          tool['link'] = `${UI_BASE_URL}/document-info-collector/${tool.id}`
+          return tool;
+        });
+      }
       return data.tools;
     }
     throw new Error('Invalid API response structure');
