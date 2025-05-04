@@ -11,8 +11,11 @@ if (
   BASE_URL = 'http://localhost:1337';
   UI_BASE_URL = 'http://localhost:4200';
 } else if (window.location.hostname === 'geniedesk.netlify.app') {
-  BASE_URL = 'https://goodact.onrender.com';
-  UI_BASE_URL = 'https://flipnetpro.netlify.app';
+  // BASE_URL = 'https://goodact.onrender.com';
+  // UI_BASE_URL = 'https://flipnetpro.netlify.app';
+
+  BASE_URL = 'https://goodact-staging.onrender.com';
+  UI_BASE_URL = 'https://6816dc499822eb91c50b68c5--flipnetpro.netlify.app';
 } else {
   BASE_URL = 'https://goodact-staging.onrender.com';
   UI_BASE_URL = 'https://6816dc499822eb91c50b68c5--flipnetpro.netlify.app';
