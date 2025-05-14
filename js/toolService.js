@@ -8,17 +8,19 @@ if (
   window.location.hostname === 'localhost' || 
   window.location.hostname === '127.0.0.1' ||
   window.location.hostname === '192.168.1.10') {
-  BASE_URL = 'http://localhost:1337';
-  UI_BASE_URL = 'http://localhost:4200';
+  // BASE_URL = 'http://localhost:1337';
+  // UI_BASE_URL = 'http://localhost:4200';
+  BASE_URL = 'https://goodact-staging.onrender.com';
+  UI_BASE_URL = 'https://6823f0cbf0908d9475f75c52--flipnetpro.netlify.app';
 } else if (window.location.hostname === 'geniedesk.netlify.app') {
   // BASE_URL = 'https://goodact.onrender.com';
   // UI_BASE_URL = 'https://flipnetpro.netlify.app';
 
   BASE_URL = 'https://goodact-staging.onrender.com';
-  UI_BASE_URL = '/home/deep/projects/propclub/dist/propclub-staging';
+  UI_BASE_URL = 'https://6823f0cbf0908d9475f75c52--flipnetpro.netlify.app';
 } else {
   BASE_URL = 'https://goodact-staging.onrender.com';
-  UI_BASE_URL = '/home/deep/projects/propclub/dist/propclub-staging';
+  UI_BASE_URL = 'https://6823f0cbf0908d9475f75c52--flipnetpro.netlify.app';
 }
 /**
  * Fetches tools from API with retry logic
