@@ -116,7 +116,7 @@ a {
 
 .navbar.scrolled {
     padding: 10px 0;
-    background: rgba(108, 99, 255, 0.95);
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
     backdrop-filter: blur(10px);
 }
 
