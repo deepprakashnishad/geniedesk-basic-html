@@ -61,6 +61,9 @@
 .tool-card {
     opacity: 0;
     animation: fadeInUp 0.6s ease forwards;
+    background: #fff9f5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #fff9f5 60%, #ffefdf);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #fff9f5 60%, #ffefdf);
 }
 
 .tool-card:nth-child(1) { animation-delay: 0.1s; }
@@ -83,4 +86,8 @@
     0%, 100% { transform: translateX(0); }
     20%, 60% { transform: translateX(-10px); }
     40%, 80% { transform: translateX(10px); }
+}
+
+.tools-cta{
+    margin-bottom: 12px;
 }

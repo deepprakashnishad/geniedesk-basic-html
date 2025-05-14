@@ -1,7 +1,8 @@
 :root {
     /* Color Variables - Easy to change */
-    --primary-color: #6c63ff;
-    --primary-dark: #564fd8;
+    --primary-light: #ff8a65;
+    --primary-color: #d73e22;
+    --primary-dark: #d73e22;
     --accent-color: #ff6584;
     --accent-dark: #e04d6a;
     --text-color: #333;
@@ -22,6 +23,9 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
+    background: #fff9f5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #fff9f5 60%, #f9dfc5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #fff9f5 60%, #f9dfc5);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -105,7 +109,7 @@ a {
 /* Navbar Styles */
 .navbar {
     padding: 20px 0;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
 }
