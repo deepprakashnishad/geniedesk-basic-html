@@ -15,10 +15,10 @@ if (
   // UI_BASE_URL = 'https://flipnetpro.netlify.app';
 
   BASE_URL = 'https://goodact-staging.onrender.com';
-  UI_BASE_URL = 'https://6816dc499822eb91c50b68c5--flipnetpro.netlify.app';
+  UI_BASE_URL = '/home/deep/projects/propclub/dist/propclub-staging';
 } else {
   BASE_URL = 'https://goodact-staging.onrender.com';
-  UI_BASE_URL = 'https://6816dc499822eb91c50b68c5--flipnetpro.netlify.app';
+  UI_BASE_URL = '/home/deep/projects/propclub/dist/propclub-staging';
 }
 /**
  * Fetches tools from API with retry logic
